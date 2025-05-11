@@ -1,8 +1,14 @@
 import Task from "./Task";
-const TaskList = () => {
+const TaskList = ({task, onToggle, onDelete, onEdit, onUpdate}) => {
   return (
     <section className="main">
-      <Task />
+      <Task task={task} 
+      onToggle={onToggle} 
+      onDelete={onDelete} 
+      onEdit={onEdit}
+      onUpdate={onUpdate}
+      />
+     
     </section>
   );
 };
