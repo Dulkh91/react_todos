@@ -1,3 +1,3 @@
 ## Todos_App
-[img alt](/todos_app.png)
+![image alt](/todos_app.png)
 

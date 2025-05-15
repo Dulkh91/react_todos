@@ -1,14 +1,16 @@
 import Task from "./Task";
-const TaskList = ({task, onToggle, onDelete, onEdit, onUpdate}) => {
+const TaskList = ({ tasks, onToggle, onDelete, onEdit, onUpdate }) => {
   return (
     <section className="main">
-      <Task task={task} 
-      onToggle={onToggle} 
-      onDelete={onDelete} 
-      onEdit={onEdit}
-      onUpdate={onUpdate}
-      />
-     
+      {tasks.map((task) => (
+        <Task
+          task={task}
+          onToggle={onToggle}
+          onDelete={onDelete}
+          onEdit={onEdit}
+          onUpdate={onUpdate}
+        />
+      ))}
     </section>
   );
 };

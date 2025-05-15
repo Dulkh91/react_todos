@@ -1,6 +1,6 @@
 import { formatDistanceToNow } from "date-fns";
 import { useState } from "react";
-const Task = ({task, onToggle,onDelete,onEdit, onUpdate}) => {
+const Task = ({task = [] , onToggle,onDelete,onEdit, onUpdate}) => {
   const [update, setUpdate] = useState(task.description)
 
   const timeAgo = formatDistanceToNow(task.createAt, {
