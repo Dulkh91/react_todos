@@ -1,13 +1,22 @@
 import {useState} from 'react'
-const NewTaskForm = ({onAdd}) => {
+
+import { useTodosContext } from './context/TodoContext';
+
+// import useTodos from '../hooks/useTodos';
+const NewTaskForm = () => {
     const [value, setValue] = useState('')
+
+    // const {addTodos} = useTodos()
+    const {addTodos} = useTodosContext()
+  
     const handleSubmit =(e)=>{
       if(e.key === 'Enter' && value.trim()){
-      onAdd(value.trim())
+      addTodos(value.trim())
+     
       setValue('')
       }
     }
-  
+   
     return (
       <input
         className="new-todo"

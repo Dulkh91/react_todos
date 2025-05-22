@@ -16,6 +16,7 @@ const Task = ({task = [] , onToggle,onDelete,onEdit, onUpdate}) => {
     }
   }
   return (
+    
     <ul className="todo-list">
       <li className={task.completed? 'completed': task.editing? 'editing': ''}>
         <div className="view">

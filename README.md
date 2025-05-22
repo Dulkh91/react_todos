@@ -12,7 +12,9 @@
 ## Install dependencies:
 ``` bash
 npm install
+``` 
 
 ## Run the Apps
+``` bash
 npm run dev
 
